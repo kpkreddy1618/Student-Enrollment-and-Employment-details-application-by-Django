@@ -1,0 +1,31 @@
+{%extends 'base.html'%}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Form</title>
+</head>
+<body>
+    <form action="updaterecord" method="post">
+        {%csrf_token%}
+        <center>
+            <h1>{{title}}</h1>
+            Enter the Student Name: <input type="text" name="name" value= {{record.s_name}}>
+            <br><br>
+            Enter the Student Class: <input type="text" name="class" value= {{record.s_class}}>
+            <br><br>
+            Enter the Student Address: <input type="text" name="address" value= {{record.s_address}}>
+            <br><br>
+            Enter the Student School: <input type="text" name="school" value= {{record.s_school}}>
+            <br><br>
+            Enter the Student Email: <input type="text" name="email" value= {{record.s_email}}>
+            <br><br>
+            <input type="submit" value="submit">
+        </center>
+    </form>    
+</body>
+</html>
+{%endblock%}
